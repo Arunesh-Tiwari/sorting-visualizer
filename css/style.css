@@ -30,10 +30,13 @@ h5 {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
-.button3 {border-radius: 8px;
+.button3 {
+  border-radius: 8px;
+  padding: 8px 15px;
+  margin: 5px;
 }
 
 nav {
@@ -41,10 +44,11 @@ nav {
   color: white;
   display: -ms-grid;
   display: grid;
+  grid-template-areas: "title array-inputs" "algo algo";
   -ms-grid-columns: 30% 60%;
       grid-template-columns: 30% 60%;
   -webkit-column-gap: 10%;
-          column-gap: 10%;
+          column-gap: 15%;
   padding: 0% 5%;
 
   font-size: 30px;
@@ -55,6 +59,21 @@ nav {
 
 
 
+.algos{
+  grid-area: algo;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.title{
+  grid-area: title;
+}
+
+.array-inputs{
+  grid-area: array-inputs;
+}
+
 nav .array-inputs {
   display: -ms-grid;
   display: grid;
@@ -63,11 +82,10 @@ nav .array-inputs {
   place-content: center;
   padding: 5% 0%;
   font-size: 14px;
-    padding: 15px 21px;
+    padding: 15px 0px;
     padding-top: 15px;
     padding-right: 21px;
     padding-bottom: 15px;
-    padding-left: 21px;
     line-height: 23px;
     font-weight: 700;
 }
@@ -99,7 +117,7 @@ nav .array-inputs #a_generate {
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
-  margin: 8px 10px;
+  margin: 8px 0px;
   cursor: pointer;
   border-radius: 8px;
   background-color: rgb(29, 180, 89);
@@ -160,7 +178,7 @@ nav .header_right .algos .butt_locked:hover {
 }
 
 nav .header_right .algos .butt_selected {
-  background-color: white;
+  background-color: green;
   color: #A8D5BAFF;
 }
 
@@ -199,6 +217,24 @@ section #Info_Cont2 {
 
 .hide {
   display: none;
+}
+
+.butt_selected{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.butt_unselected{
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.butt_locked{
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
 }
 
 /*
